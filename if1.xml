@@ -67,7 +67,7 @@
                     <field name="OP">LT</field>
                     <value name="A">
                       <block type="sensor_object" id="195">
-                        <field name="OBJECT">REAR</field>
+                        <field name="OBJECT">RIGHTSIDE</field>
                       </block>
                     </value>
                     <value name="B">
@@ -82,7 +82,7 @@
                     <field name="ACTION">FLASH</field>
                     <value name="LED">
                       <block type="math_number" id="198">
-                        <field name="NUM">0</field>
+                        <field name="NUM">1</field>
                       </block>
                     </value>
                   </block>
@@ -109,7 +109,7 @@
                         <field name="ACTION">FLASH</field>
                         <value name="LED">
                           <block type="math_number" id="192">
-                            <field name="NUM">0</field>
+                            <field name="NUM">2</field>
                           </block>
                         </value>
                       </block>
