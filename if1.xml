@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="44" inline="false" x="135" y="128">
+  <block type="controls_whileUntil" id="44" inline="false" x="139" y="150">
     <field name="MODE">UNTIL</field>
     <value name="NUMBER">
       <block type="sensor_button" id="66">
@@ -61,12 +61,70 @@
               </block>
             </statement>
             <next>
-              <block type="robot_delay" id="169" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="170">
-                    <field name="NUM">150</field>
+              <block type="controls_if" id="193" inline="false">
+                <value name="IF0">
+                  <block type="logic_compare" id="194" inline="true">
+                    <field name="OP">LT</field>
+                    <value name="A">
+                      <block type="sensor_object" id="195">
+                        <field name="OBJECT">REAR</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="196">
+                        <field name="NUM">75</field>
+                      </block>
+                    </value>
                   </block>
                 </value>
+                <statement name="DO0">
+                  <block type="led_select" id="197" inline="true">
+                    <field name="ACTION">FLASH</field>
+                    <value name="LED">
+                      <block type="math_number" id="198">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <next>
+                  <block type="controls_if" id="187" inline="false">
+                    <value name="IF0">
+                      <block type="logic_compare" id="188" inline="true">
+                        <field name="OP">LT</field>
+                        <value name="A">
+                          <block type="sensor_object" id="189">
+                            <field name="OBJECT">REAR</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="190">
+                            <field name="NUM">75</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="led_select" id="191" inline="true">
+                        <field name="ACTION">FLASH</field>
+                        <value name="LED">
+                          <block type="math_number" id="192">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="robot_delay" id="169" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="170">
+                            <field name="NUM">150</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
               </block>
             </next>
           </block>
